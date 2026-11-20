@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Сборка — Балаев Сейт-Ахмет</title>
+  <meta name="description" content="Портфолио фронтенд-разработчика: компьютер, собранный из собственных проектов." />
+  <meta name="theme-color" content="#020203" />
+  <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <div id="loader">
+    <div class="loader-name">С Б О Р К А</div>
+    <div class="loader-track"><div id="loader-bar"></div></div>
+  </div>
+
+  <header class="brand">
+    <span>Сборка</span>
+    <span class="brand-sub">Портфолио Балаева Сейт-Ахмета</span>
+  </header>
+
+  <nav class="quick-nav" aria-label="Быстрые переходы">
+    <button type="button" data-dialog="projects-panel">Проекты</button>
+    <button type="button" data-dialog="contacts-panel">Контакты</button>
+  </nav>
+
+  <button id="hint" type="button">
+    <span class="hint-ring" aria-hidden="true"></span>
+    <span>Включить компьютер</span>
+  </button>
+
+  <main id="copy">
+    <section class="block hero l" data-stop="0">
+      <p class="tag">Портфолио</p>
+      <h1>Балаев<br />Сейт-Ахмет</h1>
+      <p class="lead">Фронтенд-разработчик. Мне редко нравится готовое, поэтому я делаю своё: свой браузер, свои живые обои, свою программу для экрана на водянке.</p>
+      <p class="more">Этот компьютер собран из моих проектов. Листай вниз.</p>
+    </section>
+
+    <section class="block l" data-stop="1">
+      <p class="tag">01 · Видеокарта</p>
+      <h2>Velocity Atelier</h2>
+      <p class="lead">3D-шоурум суперкаров. Двери открываются, мотор звучит, на любой машине можно выехать на трассу.</p>
+      <p class="stack">Nuxt 4 · three.js · Blender</p>
+      <a class="project-action" data-project="velocity" target="_blank" rel="noopener">Открыть шоурум</a>
+    </section>
+
+    <section class="block r" data-stop="2">
+      <p class="tag">02 · Память</p>
+      <h2>Resonance</h2>
+      <p class="lead">Музыкальные инструменты в 3D, на которых можно играть: настоящие детали, полифония, готовые аранжировки.</p>
+      <p class="stack">TypeScript · three.js</p>
+      <a class="project-action" data-project="resonance" target="_blank" rel="noopener">Играть на инструментах</a>
+    </section>
+
+    <section class="block r" data-stop="3">
+      <p class="tag">03 · Водоблок</p>
+      <h2>CoolerScreen</h2>
+      <p class="lead">Программа для экрана на помпе водяного охлаждения. Темы, GIF, рисование, свой дашборд с датчиками. Протокол экрана разобрал сам.</p>
+      <p class="stack">C# · .NET · H.264</p>
+    </section>
+
+    <section class="block l" data-stop="4">
+      <p class="tag">04 · Резервуар</p>
+      <h2>Vivid</h2>
+      <p class="lead">Живые обои для Windows: видео, GIF, сцены с частицами. Почти не тратит процессор.</p>
+      <p class="stack">C# · Windows Composition</p>
+    </section>
+
+    <section class="block r" data-stop="5">
+      <p class="tag">05 · Материнская плата</p>
+      <h2>Horizon</h2>
+      <p class="lead">Собственный браузер: свой поиск, конструктор оформления, сейф паролей, VPN. Версии для Windows и Mac.</p>
+      <p class="stack">Electron · Node.js</p>
+    </section>
+
+    <section class="block l desk-tip" data-stop="8">
+      <p class="tag">Попробуй клавиатуру и мышь</p>
+    </section>
+
+    <section class="block l final" data-stop="9">
+      <p class="tag">Контакты</p>
+      <h2>Соберём<br />что-нибудь своё</h2>
+      <ul class="links">
+        <li><a href="https://t.me/Saitama000001" target="_blank" rel="noopener"><span>Telegram</span><b>@Saitama000001</b></a></li>
+        <li><a href="https://github.com/Sait5" target="_blank" rel="noopener"><span>GitHub</span><b>Sait5</b></a></li>
+        <li><a href="mailto:balaevs134@gmail.com"><span>Почта</span><b>balaevs134@gmail.com</b></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <dialog class="portfolio-panel" id="projects-panel" aria-labelledby="projects-title">
+    <header class="panel-header">
+      <h2 id="projects-title">Проекты</h2>
+      <form method="dialog"><button type="submit" autofocus>Закрыть</button></form>
+    </header>
+    <ul class="portfolio-list"></ul>
+  </dialog>
+
+  <dialog class="portfolio-panel" id="contacts-panel" aria-labelledby="contacts-title">
+    <header class="panel-header">
+      <h2 id="contacts-title">Контакты</h2>
+      <form method="dialog"><button type="submit" autofocus>Закрыть</button></form>
+    </header>
+  </dialog>
+
+  <nav id="rail" aria-label="Разделы">
+    <button data-go="0"><i></i><span>Начало</span></button>
+    <button data-go="1"><i></i><span>Velocity</span></button>
+    <button data-go="2"><i></i><span>Resonance</span></button>
+    <button data-go="3"><i></i><span>CoolerScreen</span></button>
+    <button data-go="4"><i></i><span>Vivid</span></button>
+    <button data-go="5"><i></i><span>Horizon</span></button>
+    <button data-go="7"><i></i><span>Монитор</span></button>
+    <button data-go="8"><i></i><span>Стол</span></button>
+    <button data-go="9"><i></i><span>Контакты</span></button>
+  </nav>
+
+  <div id="browser"></div>
+  <div id="scroll"></div>
+  <script type="module" src="/src/portfolio.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
